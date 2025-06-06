@@ -1,0 +1,15 @@
+@use './variables' as vars;
+@use './header';
+@use './footer';
+@use './card';
+@use './gallery';
+@use './collapse';
+@use './rating';
+@use './tag';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: vars.$background;
+  color: vars.$text;
+}
