@@ -5,11 +5,11 @@ import Collapse from "../components/Collapse";
 function About() {
   return (
     <section>
-      <Banner
-        image="/images/home-banner.png"
-        altText="Bannière À propos"
-        text="Chez vous, partout et ailleurs"
-      />
+  <Banner
+  image="/images/home-banner.png"
+  altText="Bannière À propos"
+  text="Chez vous, partout et ailleurs"
+/>
       <div className="about-collapses">
         <Collapse title="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.

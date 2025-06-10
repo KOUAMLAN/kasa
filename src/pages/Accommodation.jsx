@@ -1,27 +1,31 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import accommodations from "../data/accommodations.json";
-import Gallery from "../components/Gallery";
+import data from "../data/accommodations.json";
 import Collapse from "../components/Collapse";
+import Gallery from "../components/Gallery";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
-import NotFound from "./NotFound";
+import "../styles/accommodation.scss";
 
 function Accommodation() {
   const { id } = useParams();
-  const accommodation = accommodations.find(acc => acc.id === id);
+  const accommodation = data.find(item => item.id === id);
 
-  if (!accommodation) return <NotFound />;
+  if (!accommodation) return <div>Logement introuvable</div>;
 
   return (
-    <section className="accommodation">
+    <section className="accommodation-detail">
+      {/* Galerie d'images */}
       <Gallery pictures={accommodation.pictures} />
+
       <div className="accommodation-header">
-        <div>
-          <h1>{accommodation.title}</h1>
-          <p>{accommodation.location}</p>
+        <div className="accommodation-main">
+          <h1 className="accommodation-title">{accommodation.title}</h1>
+          <p className="accommodation-location">{accommodation.location}</p>
           <div className="tags">
-            {accommodation.tags.map(tag => <Tag key={tag} tag={tag} />)}
+            {accommodation.tags.map((tag, idx) => (
+              <Tag key={idx} tag={tag} />
+            ))}
           </div>
         </div>
         <div className="host-rating">
@@ -32,16 +36,18 @@ function Accommodation() {
           <Rating rating={parseInt(accommodation.rating, 10)} />
         </div>
       </div>
-      <div className="accommodation-details">
-        <Collapse title="Description" content={accommodation.description} />
-        <Collapse
-          title="Équipements"
-          content={
-            <ul>
-              {accommodation.equipments.map(eq => <li key={eq}>{eq}</li>)}
-            </ul>
-          }
-        />
+
+      <div className="accommodation-collapses">
+        <Collapse title="Description">
+          <p className="accommodation-description">{accommodation.description}</p>
+        </Collapse>
+        <Collapse title="Équipements">
+          <ul className="accommodation-equipments">
+            {accommodation.equipments.map((equip, idx) => (
+              <li key={idx}>{equip}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </section>
   );

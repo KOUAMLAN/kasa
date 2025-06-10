@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/card.scss";
 
 function Card({ accommodation }) {
   return (
     <Link to={`/accommodation/${accommodation.id}`} className="card">
-      <img src={accommodation.cover} alt={accommodation.title} style={{ width: "100%" }} />
-      <h3>{accommodation.title}</h3>
-      <p>{accommodation.location}</p>
+      <div className="card-img-container">
+        <img src={accommodation.cover} alt={accommodation.title} className="card-img" />
+        <div className="card-overlay"></div>
+        <div className="card-title-overlay">{accommodation.title}</div>
+      </div>
     </Link>
   );
 }
-
 export default Card;

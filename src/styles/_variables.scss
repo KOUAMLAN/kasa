@@ -1,14 +1,12 @@
-$primary: #387ef5;
-$secondary: #32db64;
-$danger: #f53d3d;
-$background: #ffffff;
-$text: #333333;
+
+$primary: #FF6060;
+$background: #fff;
+$text: #333;
 $radius: 10px;
 
 :export {
   primary: $primary;
-  secondary: $secondary;
-  danger: $danger;
   background: $background;
   text: $text;
+  radius: $radius;
 }

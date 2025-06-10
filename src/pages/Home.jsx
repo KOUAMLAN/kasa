@@ -1,19 +1,17 @@
 import React from "react";
-
-import accommodations from "../data/accommodations.json";
-import Card from "../components/Card";
+import Banner from "../components/Banner";
+import CardGrid from "../components/CardGrid";
 
 function Home() {
   return (
-    <section>
-      <h1>Nos hébergements</h1>
-      <div className="cards">
-        {accommodations.map(acc => (
-          <Card key={acc.id} accommodation={acc} />
-        ))}
-      </div>
-    </section>
+    <main>
+ <Banner
+  image="/images/image-source-1.png"
+  altText="Bannière d'accueil"
+  text="Chez vous, partout et ailleurs"
+/>
+      <CardGrid />
+    </main>
   );
 }
-
 export default Home;

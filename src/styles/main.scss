@@ -1,15 +1,15 @@
-@use './variables' as vars;
+@use './variables' as *;
 @use './header';
-@use './footer';
+@use './banner';
 @use './card';
-@use './gallery';
-@use './collapse';
-@use './rating';
-@use './tag';
+@use './footer';
+@use './home';
+@use './about';
 
+// RESET & BODY
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: $background;
+  color: $text;
   margin: 0;
-  background: vars.$background;
-  color: vars.$text;
 }
