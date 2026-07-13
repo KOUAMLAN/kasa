@@ -5,11 +5,38 @@
 @use './footer';
 @use './home';
 @use './about';
+@use './accommodation';
 
 // RESET & BODY
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $background;
   color: $text;
   margin: 0;
+  overflow-x: hidden;
+}
+
+.page-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    padding: 0 12px;
+  }
+}
+
+.about-page .about-collapses {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

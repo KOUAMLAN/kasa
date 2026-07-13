@@ -77,13 +77,17 @@
 
 @media (max-width: 600px) {
   .cards-container {
-    gap: 14px 0;
+    gap: 16px 0;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    padding: 0;
   }
   .card {
-    width: 98vw;
+    width: 100%;
+    max-width: 100%;
     min-width: 0;
-    max-width: 100vw;
+  }
+  .card .card-img-container {
+    height: 220px;
   }
 }

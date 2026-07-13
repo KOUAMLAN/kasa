@@ -14,7 +14,7 @@ function Accommodation() {
   if (!accommodation) return <div>Logement introuvable</div>;
 
   return (
-    <section className="accommodation-detail">
+    <section className="page-content accommodation-detail">
       {/* Galerie d'images */}
       <Gallery pictures={accommodation.pictures} />
 

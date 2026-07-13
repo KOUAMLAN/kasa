@@ -1,14 +1,14 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
+import { assetUrl } from "../utils/assets";
 
 function About() {
   return (
-    <section>
+    <section className="page-content about-page">
       <Banner
-        image="/images/home-banner.png"
+        image={assetUrl("images/home-banner.png")}
         altText="Bannière À propos"
-        text="Chez vous, partout et ailleurs"
       />
       <div className="about-collapses">
         <Collapse title="Fiabilité">
