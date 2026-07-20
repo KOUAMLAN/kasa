@@ -1,4 +1,5 @@
 @use './variables' as *;
+
 @use './header';
 @use './banner';
 @use './card';
@@ -6,37 +7,88 @@
 @use './home';
 @use './about';
 @use './accommodation';
+@use './collapse';
 
-// RESET & BODY
-html {
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
   overflow-x: hidden;
 }
+
 
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $background;
   color: $text;
-  margin: 0;
-  overflow-x: hidden;
 }
+
+
+/* IMAGES */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* CONTENU */
 
 .page-content {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-  width: 100%;
 
-  @media (max-width: 600px) {
-    padding: 0 12px;
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+
+  @media(max-width:900px){
+    padding:0 16px;
   }
+
+
+  @media(max-width:600px){
+    padding:0 12px;
+  }
+
 }
 
+
+/* ABOUT */
+
+.about-page {
+
+  width:100%;
+
+}
+
+
 .about-page .about-collapses {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+
+  width:100%;
+
+  max-width:800px;
+
+  margin:0 auto 3rem;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:1.5rem;
+
 }
