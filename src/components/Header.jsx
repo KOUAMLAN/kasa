@@ -1,19 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { assetUrl } from "../utils/assets";
+import HeaderLogo from "../assets/images/Header.webp";
 import "../styles/header.scss";
 
 function Header() {
   return (
     <header className="header">
       <img
-        src={assetUrl("images/_Header.webp")}
+        src={HeaderLogo}
         alt="Logo Kasa"
-        className="header-logo"
         width="210"
         height="68"
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
+        className="header-logo"
       />
 
       <nav>

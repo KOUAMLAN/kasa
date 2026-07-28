@@ -1,24 +1,19 @@
-import React from "react";
 import PropTypes from "prop-types";
 import "../styles/banner.scss";
 
 function Banner({ image, altText, text }) {
   return (
     <div className="banner">
-      <picture>
-        <source srcSet={image} type="image/webp" />
-
-        <img
-          src={image}
-          alt={altText}
-          className="banner-image"
-          width="1240"
-          height="700"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-        />
-      </picture>
+      <img
+        src={image}
+        alt={altText}
+        className="banner-image"
+        width="1240"
+        height="700"
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+      />
 
       <div className="banner-overlay"></div>
 
