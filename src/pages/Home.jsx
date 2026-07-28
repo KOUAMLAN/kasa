@@ -7,12 +7,14 @@ function Home() {
   return (
     <main className="page-content">
       <Banner
-        image={assetUrl("images/image-source-1.png")}
-        altText="Bannière d'accueil"
+        image={assetUrl("images/image-source-1.webp")}
+        altText="Vue d'une maison de location immobilière"
         text="Chez vous, partout et ailleurs"
       />
+
       <CardGrid />
     </main>
   );
 }
+
 export default Home;

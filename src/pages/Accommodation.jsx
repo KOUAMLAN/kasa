@@ -31,7 +31,14 @@ function Accommodation() {
         <div className="host-rating">
           <div className="host">
             <span>{accommodation.host.name}</span>
-            <img src={accommodation.host.picture} alt={accommodation.host.name} />
+       <img
+ src={accommodation.host.picture}
+ alt={`Portrait de ${accommodation.host.name}`}
+ width="64"
+ height="64"
+ loading="lazy"
+ decoding="async"
+/>
           </div>
           <Rating rating={parseInt(accommodation.rating, 10)} />
         </div>
