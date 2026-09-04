@@ -1,73 +1,97 @@
-header {
+.header {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 40px 20px 30px;
   box-sizing: border-box;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+}
+
+.header-logo {
+  display: block;
+  width: 210px;
+  height: auto;
+  user-select: none;
+}
+
+.header nav {
+  display: flex;
+  gap: 40px;
+}
+
+.header .nav-link {
+  color: #ff6060;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header .nav-link:hover,
+.header .nav-link.active {
+  color: #000;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    max-width: 95vw;
+    padding: 24px 0 18px;
+  }
 
   .header-logo {
-    width: 210px;
-    height: auto;
-    user-select: none;
-    display: block;
-    margin-left: 0;
+    width: 150px;
   }
 
-  nav {
-    display: flex;
-    gap: 40px;
-    margin-right: 0;
-
-    .nav-link {
-      color: #ff6060;
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 24px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: color 0.2s;
-
-      &:hover,
-      &.active {
-        color: #000;
-        text-decoration: underline;
-      }
-    }
+  .header nav {
+    gap: 20px;
   }
 
-  @media (max-width: 1024px) {
-    max-width: 95vw;
-    padding: 24px 0 18px 0;
-    .header-logo { width: 150px; }
-    nav { gap: 20px; }
-    .nav-link { font-size: 1.1rem; }
+  .header .nav-link {
+    font-size: 1.1rem;
   }
+}
 
-  @media (max-width: 600px) {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
+@media (max-width: 600px) {
+  .header {
     padding: 12px;
     gap: 8px;
-    .header-logo { width: 72px; max-width: 40%; }
-    nav {
-      gap: 10px;
-      margin-left: 0;
-      flex-shrink: 0;
-    }
-    .nav-link { font-size: 0.7rem; letter-spacing: 0; }
   }
 
-  @media (max-width: 360px) {
+  .header-logo {
+    width: 72px;
+    max-width: 40%;
+  }
+
+  .header nav {
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .header .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
     padding: 10px 8px;
-    .header-logo { width: 60px; }
-    nav { gap: 8px; }
-    .nav-link { font-size: 0.65rem; }
+  }
+
+  .header-logo {
+    width: 60px;
+  }
+
+  .header nav {
+    gap: 8px;
+  }
+
+  .header .nav-link {
+    font-size: 0.65rem;
   }
 }

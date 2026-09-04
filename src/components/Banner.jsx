@@ -9,13 +9,13 @@ function Banner({ image, altText, text }) {
         alt={altText}
         className="banner-image"
         width="1240"
-        height="700"
+        height="347"
         fetchPriority="high"
         loading="eager"
         decoding="async"
       />
 
-      <div className="banner-overlay"></div>
+      <div className="banner-overlay" aria-hidden="true"></div>
 
       {text && <h1 className="banner-text">{text}</h1>}
     </div>

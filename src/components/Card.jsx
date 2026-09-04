@@ -6,11 +6,24 @@ function Card({ accommodation }) {
   return (
     <Link to={`/accommodation/${accommodation.id}`} className="card">
       <div className="card-img-container">
-        <img src={accommodation.cover} alt={accommodation.title} className="card-img" />
+        <img
+          src={accommodation.cover}
+          alt={accommodation.title}
+          className="card-img"
+          width="600"
+          height="400"
+          loading="lazy"
+          decoding="async"
+        />
+
         <div className="card-overlay"></div>
-        <div className="card-title-overlay">{accommodation.title}</div>
+
+        <div className="card-title-overlay">
+          {accommodation.title}
+        </div>
       </div>
     </Link>
   );
 }
+
 export default Card;

@@ -1,15 +1,15 @@
-import { assetUrl } from "../utils/assets";
+import FooterLogo from "../assets/images/logo-footer.webp";
 import "../styles/footer.scss";
 
 function Footer() {
   return (
     <footer className="footer">
       <img
-        src={assetUrl("images/logo-footer.webp")}
+        src={FooterLogo}
         alt="Logo Kasa"
         className="footer-logo"
-        width="122"
-        height="40"
+        width="180"
+        height="59"
         loading="lazy"
         decoding="async"
       />
